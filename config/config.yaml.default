@@ -1,0 +1,28 @@
+bots:
+  main:
+    name: charrobot
+    state_repository:
+      name: sequel
+      endpoint: 'sqlite://storage/charrobot.db'
+    pool_size: 1
+    provider:
+      name: REPLACE_ME # telegram | discord
+      token: REPLACE_ME # get your bot token
+      echo: true
+      debug: true
+    channels:
+      master: REPLACE_ME # Currently, the bot only allows messages from the master channel.
+                         # You need to know your channel/group id.
+database:
+  adapter: 'sqlite3'
+  database: charrobot-data.db
+features: []
+logger:
+  stdout: yes
+  severity: debug
+omega:
+  user: REPLACE_ME
+  pass: REPLACE_ME
+  endpoint: https://omegaup.com
+  contests:
+    - REPLACE_ME # for clarifications and scoreboard updates, set the channels here.
